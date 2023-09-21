@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import "./index.css";
 import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -17,6 +18,15 @@ const App = () => {
     { id: 4, text: "Learn Reactjs", day: "Feb 8th at 5:30pm", reminder: false },
     { id: 5, text: "Learn Vuejs", day: "Feb 9th at 6:30pm", reminder: false },
   ]);
+
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 1000) + 1;
+    const newTask = {
+      id,
+      ...task,
+    };
+    setTasks([...tasks, newTask]);
+  };
 
   // Delete task
   const deleteTask = (id) => {
@@ -35,6 +45,8 @@ const App = () => {
   return (
     <div className="container">
       <Header title="Task Tracker" />
+      <AddTask onAdd={addTask} />
+
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
