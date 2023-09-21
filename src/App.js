@@ -6,6 +6,7 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
 const App = () => {
+  const [showAddTask, setShowAddTask] = useState(true);
   const [tasks, setTasks] = useState([
     { id: 1, text: "Learn PHP", day: "Feb 5th at 2:30pm", reminder: true },
     { id: 2, text: "Learn Laravel", day: "Feb 6th at 3:30pm", reminder: true },
@@ -44,8 +45,12 @@ const App = () => {
 
   return (
     <div className="container">
-      <Header title="Task Tracker" />
-      <AddTask onAdd={addTask} />
+      <Header
+        title="Task Tracker"
+        onAdd={() => setShowAddTask((prevState) => !prevState)}
+        
+      />
+      {showAddTask && <AddTask onAdd={addTask} />}
 
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
