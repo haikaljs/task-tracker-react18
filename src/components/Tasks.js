@@ -11,11 +11,14 @@ const tasks = [
   { id: 5, text: "Learn Vuejs", day: "Feb 9th at 6:30pm", reminder: false },
 ];
 
-
 const Tasks = () => {
   return (
-    <div>Tasks</div>
-  )
-}
+    <>
+      {tasks.map((task) => (
+        <h3 key={task.id}>{task.text}</h3>
+      ))}
+    </>
+  );
+};
 
-export default Tasks
+export default Tasks;
