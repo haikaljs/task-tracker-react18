@@ -17,10 +17,16 @@ const App = () => {
     { id: 4, text: "Learn Reactjs", day: "Feb 8th at 5:30pm", reminder: false },
     { id: 5, text: "Learn Vuejs", day: "Feb 9th at 6:30pm", reminder: false },
   ]);
+
+  // Delete task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <div className="container">
       <Header title="Task Tracker" />
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
 };
