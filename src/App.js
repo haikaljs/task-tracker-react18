@@ -48,7 +48,7 @@ const App = () => {
       <Header
         title="Task Tracker"
         onAdd={() => setShowAddTask((prevState) => !prevState)}
-        
+        showAdd={showAddTask}
       />
       {showAddTask && <AddTask onAdd={addTask} />}
 
