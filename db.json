@@ -17,24 +17,6 @@
       "text": "Learn Reactjs",
       "day": "Feb 8th at 5:30pm",
       "reminder": false
-    },
-    {
-      "text": "haikal",
-      "day": "fdf",
-      "reminder": true,
-      "id": 5
-    },
-    {
-      "text": "fatimah",
-      "day": "fdf",
-      "reminder": true,
-      "id": 7
-    },
-    {
-      "text": "fdf",
-      "day": "fdf",
-      "reminder": true,
-      "id": 8
     }
   ]
 }
