@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Learn PHP",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": true
-    },
-    {
       "id": 2,
       "text": "Learn Laravel",
       "day": "Feb 6th at 3:30pm",
@@ -37,8 +31,8 @@
       "id": 7
     },
     {
-      "text": "kamilah",
-      "day": "dff",
+      "text": "fdf",
+      "day": "fdf",
       "reminder": true,
       "id": 8
     }
