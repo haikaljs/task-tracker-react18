@@ -7,3 +7,9 @@
 
 This project is just to refresh my personal skills
 
+## Usage
+
+- npm i
+- npm start
+- npm run server
+
